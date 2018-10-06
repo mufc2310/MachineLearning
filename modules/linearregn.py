@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
 
-dataset = pd.read_csv("../Desktop/datasci-master/Final/Regression/Salary_Data.csv")
+dataset = pd.read_csv("../../../Desktop/datasci-master/Final/Regression/Linear Regression/Salary_Data.csv")
 X = dataset.iloc[:, :-1].values
 y = dataset.iloc[:, 1].values
 
@@ -19,7 +19,7 @@ y_pred = regressor.predict(X_test)
 
 print('PREDICTED\t\tACTUAL')
 for i in range(len(y_pred)):
-    print(y_pred[i], '\t', y_train[i])
+    print(y_pred[i], '\t', y_test[i])
 
 plt.scatter(X_train, y_train, color='red', label='Some1')
 plt.plot(X_train, regressor.predict(X_train), color='blue', label='Some1')
